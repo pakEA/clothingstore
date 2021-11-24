@@ -1,0 +1,113 @@
+[
+  {
+    "category": "women",
+    "name": "esprit ruffle shirt",
+    "price": "$16.64",
+    "img": "images/product-01.jpg"
+  },
+
+  {
+    "category": "women",
+    "name": "Herschel supply",
+    "price": "$35.31",
+    "img": "images/product-02.jpg"
+  },
+
+  {
+    "category": "men",
+    "name": "Only Check Trouser",
+    "price": "$25.50",
+    "img": "images/product-03.jpg"
+  },
+
+  {
+    "category": "women",
+    "name": "Classic Trench Coat",
+    "price": "$75.00",
+    "img": "images/product-04.jpg"
+  },
+
+  {
+    "category": "women",
+    "name": "Front Pocket Jumper",
+    "price": "$34.75",
+    "img": "images/product-05.jpg"
+  },
+
+  {
+    "category": "watches",
+    "name": "Vintage Inspired Classic",
+    "price": "$93.20",
+    "img": "images/product-06.jpg"
+  },
+
+  {
+    "category": "women",
+    "name": "Shirt in Stretch Cotton",
+    "price": "$52.66",
+    "img": "images/product-07.jpg"
+  },
+
+  {
+    "category": "women",
+    "name": "Pieces Metallic Printed",
+    "price": "$18.96",
+    "img": "images/product-08.jpg"
+  },
+
+  {
+    "category": "shoes",
+    "name": "Converse All Star Hi Plimsolls",
+    "price": "$75.00",
+    "img": "images/product-09.jpg"
+  },
+
+  {
+    "category": "women",
+    "name": "Femme T-Shirt In Stripe",
+    "price": "$25.85",
+    "img": "images/product-10.jpg"
+  },
+
+  {
+    "category": "men",
+    "name": "Herschel supply",
+    "price": "$63.16",
+    "img": "images/product-11.jpg"
+  },
+
+  {
+    "category": "men",
+    "name": "Herschel supply",
+    "price": "$63.15",
+    "img": "images/product-12.jpg"
+  },
+
+  {
+    "category": "women",
+    "name": "T-Shirt with Sleeve",
+    "price": "$18.49",
+    "img": "images/product-13.jpg"
+  },
+
+  {
+    "category": "women",
+    "name": "Pretty Little Thing",
+    "price": "$54.79",
+    "img": "images/product-14.jpg"
+  },
+
+  {
+    "category": "watches",
+    "name": "Mini Silver Mesh Watch",
+    "price": "$86.85",
+    "img": "images/product-15.jpg"
+  },
+
+  {
+    "category": "women",
+    "name": "Square Neck Back",
+    "price": "$29.64",
+    "img": "images/product-16.jpg"
+  }
+]
