@@ -17,9 +17,19 @@ def product(request):
     file_path = os.path.join(module_dir, 'fixtures/products.json')
     products = json.load(open(file_path, encoding='utf-8'))
 
+    product_category = [
+        {'data': '*', 'category': 'all products'},
+        {'data': '.women', 'category': 'women'},
+        {'data': '.men', 'category': 'men'},
+        {'data': '.bag', 'category': 'bag'},
+        {'data': '.shoes', 'category': 'shoes'},
+        {'data': '.watches', 'category': 'watches'},
+    ]
+
     context = {
         'page_title': 'shop',
         'products': products,
+        'product_category': product_category,
     }
     return render(request, 'mainapp/product.html', context)
 
