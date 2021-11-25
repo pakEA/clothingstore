@@ -3,7 +3,7 @@
     <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 {% if request.resolver_match.url_name == '' %}
         how-active1
     {% endif %}" data-filter="{{ product.data }}">
-        {{ product.category|capfirst }}
+        {{ product.name|capfirst }}
     </button>
     {% endfor %}
 </div>
