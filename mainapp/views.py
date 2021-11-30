@@ -1,7 +1,7 @@
 import json
 import os.path
 from django.shortcuts import render
-from mainapp.models import Product, ProductCategory
+from mainapp.models import ProductCategory, Product
 # Create your views here.
 module_dir = os.path.dirname(__file__,)
 
@@ -19,20 +19,13 @@ def product(request):
 
     products = Product.objects.all()
     product_category = ProductCategory.objects.all()
-
-    # product_category = [
-    #     {'data': '*', 'category': 'all products'},
-    #     {'data': '.women', 'category': 'women'},
-    #     {'data': '.men', 'category': 'men'},
-    #     {'data': '.bag', 'category': 'bag'},
-    #     {'data': '.shoes', 'category': 'shoes'},
-    #     {'data': '.watches', 'category': 'watches'},
-    # ]
+    # product_images = ProductGallery.objects.all()
 
     context = {
         'page_title': 'shop',
         'products': products,
         'product_category': product_category,
+        # 'product_images': product_images,
     }
     return render(request, 'mainapp/product.html', context)
 
