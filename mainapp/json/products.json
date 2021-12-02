@@ -1,0 +1,145 @@
+[
+  {
+    "category": "women",
+    "name": "esprit ruffle shirt",
+    "image": "images/product-01.jpg",
+    "description": "Soft, breathable jersey\nMade with organic cotton\nGrown using less water and no pesticides\nIt’s a win-win, improving the environment for both cotton farmers and wildlife\n\nMain: 100% Cotton.",
+    "price": "16.64",
+    "quantity": "34"
+  },
+
+  {
+    "category": "women",
+    "name": "Herschel supply",
+    "image": "images/product-02.jpg",
+    "description": "Lightweight cotton\nMade with organic cotton\nGrown using less water and no pesticides\nIt’s a win-win, improving the environment for both cotton farmers and wildlife \n\nMain: 100% Cotton.",
+    "price": "35.31",
+    "quantity": "19"
+  },
+
+  {
+    "category": "men",
+    "name": "Only Check Trouser",
+    "image": "images/product-03.jpg",
+    "description": "Lightweight, stretch cotton\nWe are a proud member of the Better Cotton Initiative\n\nBetter Cotton is sourced via a system of Mass Balance \n\nMain: 97% Cotton, 3% Spandex.",
+    "price": "25.50",
+    "quantity": "23"
+  },
+
+  {
+    "category": "women",
+    "name": "Classic Trench Coat",
+    "image": "images/product-04.jpg",
+    "description": "Plain-woven fabric\nLightweight feel\n\nMain: 61% Cotton, 33% Polyester, 6% Nylon.",
+    "price": "75.00",
+    "quantity": "13"
+  },
+
+  {
+    "category": "women",
+    "name": "Front Pocket Jumper",
+    "image": "images/product-05.jpg",
+    "description": "Fine, wool-mix knit\nSoft and warm\n\nMain: 52% Polyester, 38% Acrylic, 8% Wool, 2% Spandex.",
+    "price": "34.75",
+    "quantity": "17"
+  },
+
+  {
+    "category": "watches",
+    "name": "Vintage Inspired Classic",
+    "image": "images/product-06.jpg",
+    "description": "Strap: 100% Stainless Steel.",
+    "price": "93.20",
+    "quantity": "20"
+  },
+
+  {
+    "category": "women",
+    "name": "Shirt in Stretch Cotton",
+    "image": "images/product-07.jpg",
+    "description": "Lightweight cotton\nSoft, strong, and breathable\n\nCollar: 100% Cotton, Embroidery: 100% Cotton, Shell: 100% Cotton.",
+    "price": "52.66",
+    "quantity": "31"
+  },
+
+  {
+    "category": "women",
+    "name": "Pieces Metallic Printed",
+    "image": "images/product-08.jpg",
+    "description": "Sheer woven fabric\nSoft and drapey\n\nFabric: 100% Viscose.",
+    "price": "18.96",
+    "quantity": "27"
+  },
+
+  {
+    "category": "shoes",
+    "name": "Converse All Star Hi Plimsolls",
+    "image": "images/product-09.jpg",
+    "description": "We could tell you that it’s the OG basketball shoe, created over 100 years ago. Or that the design has largely stayed the same, because why mess with a good thing. Or how it became the unofficial sneaker of all your favorite artists and musicians, who each made it their own. Yeah, we could share a lot of stories, but the one that matters most isn’t ours—it’s yours. It’s how and where you take your Chucks. The legacy is long, but what comes next is up to you. We just make the shoe. You make the stories.\nWHY YOU SHOULD BE DOWN\n\n    Canvas upper is lightweight and durable.\n    The timeless silhouette you know and love.\n    High profile for classic coverage.\n    Medial eyelets enhance airflow.\n    Classic All Star ankle patch.",
+    "price": "75.00",
+    "quantity": "15"
+  },
+
+  {
+    "category": "women",
+    "name": "Femme T-Shirt In Stripe",
+    "image": "images/product-10.jpg",
+    "description": "Sheer woven fabric\nSoft and drapey\n\nFabric: 100% Viscose.",
+    "price": "25.85",
+    "quantity": "18"
+  },
+
+  {
+    "category": "men",
+    "name": "slim fit organic oxford shirt in dusty blue",
+    "image": "images/product-11.jpg",
+    "description": "Lightweight, stretchy fabric\nMade with organic cotton\nGrown using less water and no pesticides\nIt's a win-win, improving the environment for both cotton farmers and wildlife \n\nMain: 97% Organic Cotton, 3% Spandex.",
+    "price": "63.16",
+    "quantity": "27"
+  },
+
+  {
+    "category": "men",
+    "name": "PS Paul Smith zebra logo leather belt",
+    "image": "images/product-12.jpg",
+    "description": "Smooth leather\n\nMain: 100% Leather.",
+    "price": "63.15",
+    "quantity": "14"
+  },
+
+  {
+    "category": "women",
+    "name": "T-Shirt with Sleeve",
+    "image": "images/product-13.jpg",
+    "description": "Soft, breathable jersey\nT-shirt fabric\n\nBody: 100% Cotton.",
+    "price": "18.49",
+    "quantity": "13"
+  },
+
+  {
+    "category": "women",
+    "name": "Pretty Little Thing",
+    "image": "images/product-14.jpg",
+    "description": "Breathable, stretchy jersey\nT-shirt fabric\n\nBody: 98% Cotton, 2% Spandex.",
+    "price": "54.79",
+    "quantity": "18"
+  },
+
+  {
+    "category": "watches",
+    "name": "Mini Silver Mesh Watch",
+    "image": "images/product-15.jpg",
+    "description": "Strap: 100% Stainless Steel, Face: 100% Metal.",
+    "price": "86.85",
+    "quantity": "16"
+  },
+
+  {
+    "category": "women",
+    "name": "Square Neck Back",
+    "image": "images/product-16.jpg",
+    "description": "Soft, breathable jersey \nT-shirt fabric \n\nMain: 100% Cotton.",
+    "price": "29.64",
+    "quantity": "32"
+  }
+]
