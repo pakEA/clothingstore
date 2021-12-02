@@ -1,0 +1,20 @@
+{% extends 'authapp/base.html' %}
+{% load static %}
+
+{% block container %}
+<h3 class="switcher switcher-login">
+    <a href="{% url 'main:index' %}"
+        class="btn btn-round form-control">
+        Home
+    </a>
+</h3>
+<form class="form form-signup" action="{% url 'auth:edit' %}" method="post" enctype="multipart/form-data">
+    <fieldset>
+        {% csrf_token %}
+        <div class="input-block">
+            {{ edit_form.as_p }}
+        </div>
+    </fieldset>
+    <button type="submit" class="btn-signup">Save</button>
+</form>
+{% endblock %}
