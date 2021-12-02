@@ -58,20 +58,6 @@ def blog_detail(request):
     return render(request, 'mainapp/blog-detail.html', context)
 
 
-def home_02(request):
-    context = {
-        'page_title': 'home 02',
-    }
-    return render(request, 'mainapp/home-02.html', context)
-
-
-def home_03(request):
-    context = {
-        'page_title': 'home 03',
-    }
-    return render(request, 'mainapp/home-03.html', context)
-
-
 def product_detail(request):
     context = {
         'page_title': 'product detail',
