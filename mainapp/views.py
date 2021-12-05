@@ -1,7 +1,7 @@
 import json
 import os.path
 from django.shortcuts import render
-
+from mainapp.models import Product, ProductCategory
 # Create your views here.
 module_dir = os.path.dirname(__file__,)
 
@@ -14,17 +14,20 @@ def index(request):
 
 
 def product(request):
-    file_path = os.path.join(module_dir, 'fixtures/products.json')
-    products = json.load(open(file_path, encoding='utf-8'))
+    # file_path = os.path.join(module_dir, 'fixtures/products.json')
+    # products = json.load(open(file_path, encoding='utf-8'))
 
-    product_category = [
-        {'data': '*', 'category': 'all products'},
-        {'data': '.women', 'category': 'women'},
-        {'data': '.men', 'category': 'men'},
-        {'data': '.bag', 'category': 'bag'},
-        {'data': '.shoes', 'category': 'shoes'},
-        {'data': '.watches', 'category': 'watches'},
-    ]
+    products = Product.objects.all()
+    product_category = ProductCategory.objects.all()
+
+    # product_category = [
+    #     {'data': '*', 'category': 'all products'},
+    #     {'data': '.women', 'category': 'women'},
+    #     {'data': '.men', 'category': 'men'},
+    #     {'data': '.bag', 'category': 'bag'},
+    #     {'data': '.shoes', 'category': 'shoes'},
+    #     {'data': '.watches', 'category': 'watches'},
+    # ]
 
     context = {
         'page_title': 'shop',
