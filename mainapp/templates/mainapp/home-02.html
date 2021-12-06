@@ -25,32 +25,32 @@
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li class="active-menu">
-								<a href="{% url 'index' %}">Home</a>
+								<a href="{% url 'main:index' %}">Home</a>
 								<ul class="sub-menu">
-									<li><a href="{% url 'index' %}">Homepage 1</a></li>
-									<li><a href="{% url 'home_02' %}">Homepage 2</a></li>
-									<li><a href="{% url 'home_03' %}">Homepage 3</a></li>
+									<li><a href="{% url 'main:index' %}">Homepage 1</a></li>
+									<li><a href="{% url 'main:home_02' %}">Homepage 2</a></li>
+									<li><a href="{% url 'main:home_03' %}">Homepage 3</a></li>
 								</ul>
 							</li>
 
 							<li>
-								<a href="{% url 'product:index' %}">Shop</a>
+								<a href="{% url 'main:index' %}">Shop</a>
 							</li>
 
 							<li class="label1" data-label1="hot">
-								<a href="{% url 'shoping_cart' %}">Features</a>
+								<a href="{% url 'main:shoping_cart' %}">Features</a>
 							</li>
 
 							<li>
-								<a href="{% url 'blog' %}">Blog</a>
+								<a href="{% url 'main:blog' %}">Blog</a>
 							</li>
 
 							<li>
-								<a href="{% url 'about' %}">About</a>
+								<a href="{% url 'main:about' %}">About</a>
 							</li>
 
 							<li>
-								<a href="{% url 'contact' %}">Contact</a>
+								<a href="{% url 'main:contact' %}">Contact</a>
 							</li>
 						</ul>
 					</div>	
@@ -83,7 +83,7 @@
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->		
 			<div class="logo-mobile">
-				<a href="{% url 'index' %}"><img src="{% static 'images/icons/logo-01.png' %}" alt="IMG-LOGO"></a>
+				<a href="{% url 'main:index' %}"><img src="{% static 'images/icons/logo-01.png' %}" alt="IMG-LOGO"></a>
 			</div>
 
 			<!-- Icon header -->
@@ -114,11 +114,11 @@
 		<div class="menu-mobile">
 			<ul class="main-menu-m">
 				<li>
-					<a href="{% url 'index' %}">Home</a>
+					<a href="{% url 'main:index' %}">Home</a>
 					<ul class="sub-menu-m">
-						<li><a href="{% url 'index' %}">Homepage 1</a></li>
-						<li><a href="{% url 'home_02' %}">Homepage 2</a></li>
-						<li><a href="{% url 'home_03' %}">Homepage 3</a></li>
+						<li><a href="{% url 'main:index' %}">Homepage 1</a></li>
+						<li><a href="{% url 'main:home_02' %}">Homepage 2</a></li>
+						<li><a href="{% url 'main:home_03' %}">Homepage 3</a></li>
 					</ul>
 					<span class="arrow-main-menu-m">
 						<i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -126,23 +126,23 @@
 				</li>
 
 				<li>
-					<a href="{% url 'product:index' %}">Shop</a>
+					<a href="{% url 'main:index' %}">Shop</a>
 				</li>
 
 				<li>
-					<a href="{% url 'shoping_cart' %}" class="label1 rs1" data-label1="hot">Features</a>
+					<a href="{% url 'main:shoping_cart' %}" class="label1 rs1" data-label1="hot">Features</a>
 				</li>
 
 				<li>
-					<a href="{% url 'blog' %}">Blog</a>
+					<a href="{% url 'main:blog' %}">Blog</a>
 				</li>
 
 				<li>
-					<a href="{% url 'about' %}">About</a>
+					<a href="{% url 'main:about' %}">About</a>
 				</li>
 
 				<li>
-					<a href="{% url 'contact' %}">Contact</a>
+					<a href="{% url 'main:contact' %}">Contact</a>
 				</li>
 			</ul>
 		</div>
@@ -178,7 +178,7 @@
 			<div class="sidebar-content flex-w w-full p-lr-65 js-pscroll">
 				<ul class="sidebar-link w-full">
 					<li class="p-b-13">
-						<a href="{% url 'index' %}" class="stext-102 cl2 hov-cl1 trans-04">
+						<a href="{% url 'main:index' %}" class="stext-102 cl2 hov-cl1 trans-04">
 							Home
 						</a>
 					</li>
@@ -309,7 +309,7 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
-								<a href="{% url 'product:index' %}" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+								<a href="{% url 'main:index' %}" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									Shop Now
 								</a>
 							</div>
@@ -333,7 +333,7 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="slideInUp" data-delay="1600">
-								<a href="{% url 'product:index' %}" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+								<a href="{% url 'main:index' %}" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									Shop Now
 								</a>
 							</div>
@@ -357,7 +357,7 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="rotateIn" data-delay="1600">
-								<a href="{% url 'product:index' %}" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+								<a href="{% url 'main:index' %}" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									Shop Now
 								</a>
 							</div>
@@ -376,7 +376,7 @@
 				<div class="block1 wrap-pic-w">
 					<img src="{% static 'images/banner-04.jpg' %}" alt="IMG-BANNER">
 
-					<a href="{% url 'product:index' %}" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+					<a href="{% url 'main:index' %}" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
 						<div class="block1-txt-child1 flex-col-l">
 							<span class="block1-name ltext-102 trans-04 p-b-8">
 								Women
@@ -401,7 +401,7 @@
 				<div class="block1 wrap-pic-w">
 					<img src="{% static 'images/banner-05.jpg' %}" alt="IMG-BANNER">
 
-					<a href="{% url 'product:index' %}" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+					<a href="{% url 'main:index' %}" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
 						<div class="block1-txt-child1 flex-col-l">
 							<span class="block1-name ltext-102 trans-04 p-b-8">
 								Men
@@ -426,7 +426,7 @@
 				<div class="block1 wrap-pic-w">
 					<img src="{% static 'images/banner-06.jpg' %}" alt="IMG-BANNER">
 
-					<a href="{% url 'product:index' %}" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+					<a href="{% url 'main:index' %}" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
 						<div class="block1-txt-child1 flex-col-l">
 							<span class="block1-name ltext-102 trans-04 p-b-8">
 								Bags
@@ -498,7 +498,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Esprit Ruffle Shirt
 												</a>
 
@@ -530,7 +530,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Herschel supply
 												</a>
 
@@ -562,7 +562,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Only Check Trouser
 												</a>
 
@@ -594,7 +594,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Classic Trench Coat
 												</a>
 
@@ -626,7 +626,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Front Pocket Jumper
 												</a>
 
@@ -658,7 +658,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Vintage Inspired Classic 
 												</a>
 
@@ -690,7 +690,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Shirt in Stretch Cotton
 												</a>
 
@@ -722,7 +722,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Pieces Metallic Printed
 												</a>
 
@@ -762,7 +762,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Converse All Star Hi Plimsolls
 												</a>
 
@@ -794,7 +794,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Femme T-Shirt In Stripe
 												</a>
 
@@ -826,7 +826,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Herschel supply 
 												</a>
 
@@ -858,7 +858,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Herschel supply
 												</a>
 
@@ -890,7 +890,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													T-Shirt with Sleeve
 												</a>
 
@@ -922,7 +922,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Pretty Little Thing
 												</a>
 
@@ -954,7 +954,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Mini Silver Mesh Watch
 												</a>
 
@@ -986,7 +986,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Square Neck Back
 												</a>
 
@@ -1026,7 +1026,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Herschel supply
 												</a>
 
@@ -1058,7 +1058,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Classic Trench Coat
 												</a>
 
@@ -1090,7 +1090,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Vintage Inspired Classic 
 												</a>
 
@@ -1122,7 +1122,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Converse All Star Hi Plimsolls
 												</a>
 
@@ -1154,7 +1154,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Herschel supply 
 												</a>
 
@@ -1186,7 +1186,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													T-Shirt with Sleeve
 												</a>
 
@@ -1218,7 +1218,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Mini Silver Mesh Watch
 												</a>
 
@@ -1258,7 +1258,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Only Check Trouser
 												</a>
 
@@ -1290,7 +1290,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Vintage Inspired Classic 
 												</a>
 
@@ -1322,7 +1322,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Shirt in Stretch Cotton
 												</a>
 
@@ -1354,7 +1354,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Pieces Metallic Printed
 												</a>
 
@@ -1386,7 +1386,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Converse All Star Hi Plimsolls
 												</a>
 
@@ -1418,7 +1418,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Femme T-Shirt In Stripe
 												</a>
 
@@ -1450,7 +1450,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Herschel supply 
 												</a>
 
@@ -1482,7 +1482,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Herschel supply
 												</a>
 
@@ -1514,7 +1514,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													T-Shirt with Sleeve
 												</a>
 
@@ -1546,7 +1546,7 @@
 
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+												<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 													Square Neck Back
 												</a>
 
@@ -1585,7 +1585,7 @@
 				<div class="col-sm-6 col-md-4 p-b-40">
 					<div class="blog-item">
 						<div class="hov-img0">
-							<a href="{% url 'blog_detail' %}">
+							<a href="{% url 'main:blog_detail' %}">
 								<img src="{% static 'images/blog-01.jpg' %}" alt="IMG-BLOG">
 							</a>
 						</div>
@@ -1614,7 +1614,7 @@
 							</div>
 
 							<h4 class="p-b-12">
-								<a href="{% url 'blog_detail' %}" class="mtext-101 cl2 hov-cl1 trans-04">
+								<a href="{% url 'main:blog_detail' %}" class="mtext-101 cl2 hov-cl1 trans-04">
 									8 Inspiring Ways to Wear Dresses in the Winter
 								</a>
 							</h4>
@@ -1629,7 +1629,7 @@
 				<div class="col-sm-6 col-md-4 p-b-40">
 					<div class="blog-item">
 						<div class="hov-img0">
-							<a href="{% url 'blog_detail' %}">
+							<a href="{% url 'main:blog_detail' %}">
 								<img src="{% static 'images/blog-02.jpg' %}" alt="IMG-BLOG">
 							</a>
 						</div>
@@ -1658,7 +1658,7 @@
 							</div>
 
 							<h4 class="p-b-12">
-								<a href="{% url 'blog_detail' %}" class="mtext-101 cl2 hov-cl1 trans-04">
+								<a href="{% url 'main:blog_detail' %}" class="mtext-101 cl2 hov-cl1 trans-04">
 									The Great Big List of Men’s Gifts for the Holidays
 								</a>
 							</h4>
@@ -1673,7 +1673,7 @@
 				<div class="col-sm-6 col-md-4 p-b-40">
 					<div class="blog-item">
 						<div class="hov-img0">
-							<a href="{% url 'blog_detail' %}">
+							<a href="{% url 'main:blog_detail' %}">
 								<img src="{% static 'images/blog-03.jpg' %}" alt="IMG-BLOG">
 							</a>
 						</div>
@@ -1702,7 +1702,7 @@
 							</div>
 
 							<h4 class="p-b-12">
-								<a href="{% url 'blog_detail' %}" class="mtext-101 cl2 hov-cl1 trans-04">
+								<a href="{% url 'main:blog_detail' %}" class="mtext-101 cl2 hov-cl1 trans-04">
 									5 Winter-to-Spring Fashion Trends to Try Now
 								</a>
 							</h4>

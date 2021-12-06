@@ -52,32 +52,32 @@
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li>
-								<a href="{% url 'index' %}">Home</a>
+								<a href="{% url 'main:index' %}">Home</a>
 								<ul class="sub-menu">
-									<li><a href="{% url 'index' %}">Homepage 1</a></li>
-									<li><a href="{% url 'home_02' %}">Homepage 2</a></li>
-									<li><a href="{% url 'home_03' %}">Homepage 3</a></li>
+									<li><a href="{% url 'main:index' %}">Homepage 1</a></li>
+									<li><a href="{% url 'main:home_02' %}">Homepage 2</a></li>
+									<li><a href="{% url 'main:home_03' %}">Homepage 3</a></li>
 								</ul>
 							</li>
 
 							<li class="active-menu">
-								<a href="{% url 'product:index' %}">Shop</a>
+								<a href="{% url 'main:index' %}">Shop</a>
 							</li>
 
 							<li class="label1" data-label1="hot">
-								<a href="{% url 'shoping_cart' %}">Features</a>
+								<a href="{% url 'main:shoping_cart' %}">Features</a>
 							</li>
 
 							<li>
-								<a href="{% url 'blog' %}">Blog</a>
+								<a href="{% url 'main:blog' %}">Blog</a>
 							</li>
 
 							<li>
-								<a href="{% url 'about' %}">About</a>
+								<a href="{% url 'main:about' %}">About</a>
 							</li>
 
 							<li>
-								<a href="{% url 'contact' %}">Contact</a>
+								<a href="{% url 'main:contact' %}">Contact</a>
 							</li>
 						</ul>
 					</div>
@@ -104,7 +104,7 @@
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->
 			<div class="logo-mobile">
-				<a href="{% url 'index' %}"><img src="{% static 'images/icons/logo-01.png' %}" alt="IMG-LOGO"></a>
+				<a href="{% url 'main:index' %}"><img src="{% static 'images/icons/logo-01.png' %}" alt="IMG-LOGO"></a>
 			</div>
 
 			<!-- Icon header -->
@@ -163,11 +163,11 @@
 
 			<ul class="main-menu-m">
 				<li>
-					<a href="{% url 'index' %}">Home</a>
+					<a href="{% url 'main:index' %}">Home</a>
 					<ul class="sub-menu-m">
-						<li><a href="{% url 'index' %}">Homepage 1</a></li>
-						<li><a href="{% url 'home_02' %}">Homepage 2</a></li>
-						<li><a href="{% url 'home_03' %}">Homepage 3</a></li>
+						<li><a href="{% url 'main:index' %}">Homepage 1</a></li>
+						<li><a href="{% url 'main:home_02' %}">Homepage 2</a></li>
+						<li><a href="{% url 'main:home_03' %}">Homepage 3</a></li>
 					</ul>
 					<span class="arrow-main-menu-m">
 						<i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -175,23 +175,23 @@
 				</li>
 
 				<li>
-					<a href="{% url 'product:index' %}">Shop</a>
+					<a href="{% url 'main:index' %}">Shop</a>
 				</li>
 
 				<li>
-					<a href="{% url 'shoping_cart' %}" class="label1 rs1" data-label1="hot">Features</a>
+					<a href="{% url 'main:shoping_cart' %}" class="label1 rs1" data-label1="hot">Features</a>
 				</li>
 
 				<li>
-					<a href="{% url 'blog' %}">Blog</a>
+					<a href="{% url 'main:blog' %}">Blog</a>
 				</li>
 
 				<li>
-					<a href="{% url 'about' %}">About</a>
+					<a href="{% url 'main:about' %}">About</a>
 				</li>
 
 				<li>
-					<a href="{% url 'contact' %}">Contact</a>
+					<a href="{% url 'main:contact' %}">Contact</a>
 				</li>
 			</ul>
 		</div>
@@ -449,7 +449,7 @@
 
 						<div class="block2-txt flex-w flex-t p-t-14">
 							<div class="block2-txt-child1 flex-col-l ">
-								<a href="{% url 'product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+								<a href="{% url 'main:product_detail' %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 									{{ product.name|title }}
 								</a>
 
