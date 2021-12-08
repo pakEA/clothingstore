@@ -1,14 +1,16 @@
 import time
 
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
-from django.shortcuts import render
 from basketapp.models import Basket
 
 
+@login_required
 def index(request):
     pass
 
 
+@login_required
 def add(request, product_pk):
     basket_item, _ = Basket.objects.get_or_create(
         user=request.user,
@@ -21,5 +23,6 @@ def add(request, product_pk):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
+@login_required
 def remove(request, pk):
     pass
