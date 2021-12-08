@@ -8,37 +8,37 @@
 <!-- Menu desktop -->
 <div class="menu-desktop">
     <ul class="main-menu active-menu">
-        <li class="active-menu">
+        <li class="{% if request.resolver_match.url_name == 'index' %} active-menu {% endif %}">
             <a href="{% url 'main:index' %}">
                 Home
             </a>
         </li>
 
-        <li>
+        <li class="{% if request.resolver_match.url_name == 'product' %} active-menu {% endif %}">
             <a href="{% url 'main:product' %}">
                 Shop
             </a>
         </li>
 
-        <li class="label1" data-label1="hot">
+        <li class="label1 {% if request.resolver_match.url_name == 'shoping_cart' %} active-menu {% endif %}" data-label1="hot">
             <a href="{% url 'main:shoping_cart' %}">
                 Features
             </a>
         </li>
 
-        <li>
+        <li class="{% if request.resolver_match.url_name == 'blog' %} active-menu {% endif %}">
             <a href="{% url 'main:blog' %}">
                 Blog
             </a>
         </li>
 
-        <li>
+        <li class="{% if request.resolver_match.url_name == 'about' %} active-menu {% endif %}">
             <a href="{% url 'main:about' %}">
                 About
             </a>
         </li>
 
-        <li>
+        <li class="{% if request.resolver_match.url_name == 'contact' %} active-menu {% endif %}">
             <a href="{% url 'main:contact' %}">
                 Contact
             </a>
