@@ -14,7 +14,7 @@
             </a>
         </li>
 
-        <li class="{% if request.resolver_match.url_name == 'product' %} active-menu {% endif %}">
+        <li class="{% if request.resolver_match.url_name == 'product' or request.resolver_match.url_name == 'category' %} active-menu {% endif %}">
             <a href="{% url 'main:product' %}">
                 Shop
             </a>
