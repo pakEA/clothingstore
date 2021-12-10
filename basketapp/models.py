@@ -11,3 +11,7 @@ class Basket(models.Model):
     quantity = models.PositiveIntegerField(default=0)
     add_datetime = models.DateTimeField(auto_now_add=True)
     update_datetime = models.DateTimeField(auto_now=True)
+
+    @property
+    def product_cost(self):
+        return self.product.price * self.quantity
