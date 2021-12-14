@@ -1,0 +1,47 @@
+{% load static %}
+
+<!-- Logo desktop -->
+<a href="#" class="logo">
+    <img src="{% static 'images/icons/logo-01.png' %}" alt="IMG-LOGO">
+</a>
+
+<!-- Menu desktop -->
+<div class="menu-desktop">
+    <ul class="main-menu active-menu">
+        <li class="active-menu">
+            <a href="{% url 'main:index' %}">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="{% url 'main:product' %}">
+                Shop
+            </a>
+        </li>
+
+        <li class="label1" data-label1="hot">
+            <a href="{% url 'main:shoping_cart' %}">
+                Features
+            </a>
+        </li>
+
+        <li>
+            <a href="{% url 'main:blog' %}">
+                Blog
+            </a>
+        </li>
+
+        <li>
+            <a href="{% url 'main:about' %}">
+                About
+            </a>
+        </li>
+
+        <li>
+            <a href="{% url 'main:contact' %}">
+                Contact
+            </a>
+        </li>
+    </ul>
+</div>

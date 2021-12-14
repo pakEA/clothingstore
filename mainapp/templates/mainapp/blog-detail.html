@@ -8,72 +8,12 @@
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
 			<div class="top-bar">
-				<div class="content-topbar flex-sb-m h-full container">
-					<div class="left-top-bar">
-						Free shipping for standard order over $100
-					</div>
-
-					<div class="right-top-bar flex-w h-full">
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							Help & FAQs
-						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							My Account
-						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							EN
-						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							USD
-						</a>
-					</div>
-				</div>
+				{% include 'mainapp/includes/inc_settings_menu.html' %}
 			</div>
 
 			<div class="wrap-menu-desktop how-shadow1">
 				<nav class="limiter-menu-desktop container">
-					
-					<!-- Logo desktop -->		
-					<a href="#" class="logo">
-						<img src="{% static 'images/icons/logo-01.png' %}" alt="IMG-LOGO">
-					</a>
-
-					<!-- Menu desktop -->
-					<div class="menu-desktop">
-						<ul class="main-menu">
-							<li>
-								<a href="{% url 'main:index' %}">Home</a>
-								<ul class="sub-menu">
-									<li><a href="{% url 'main:index' %}">Homepage 1</a></li>
-									<li><a href="{% url 'main:home_02' %}">Homepage 2</a></li>
-									<li><a href="{% url 'main:home_03' %}">Homepage 3</a></li>
-								</ul>
-							</li>
-
-							<li>
-								<a href="{% url 'main:index' %}">Shop</a>
-							</li>
-
-							<li class="label1" data-label1="hot">
-								<a href="{% url 'main:shoping_cart' %}">Features</a>
-							</li>
-
-							<li class="active-menu">
-								<a href="{% url 'main:blog' %}">Blog</a>
-							</li>
-
-							<li>
-								<a href="{% url 'main:about' %}">About</a>
-							</li>
-
-							<li>
-								<a href="{% url 'main:contact' %}">Contact</a>
-							</li>
-						</ul>
-					</div>	
+					{% include 'mainapp/includes/inc_menu.html' %}
 
 					<!-- Icon header -->
 					<div class="wrap-icon-header flex-w flex-r-m">
@@ -126,66 +66,10 @@
 
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
-			<ul class="topbar-mobile">
-				<li>
-					<div class="left-top-bar">
-						Free shipping for standard order over $100
-					</div>
-				</li>
-
-				<li>
-					<div class="right-top-bar flex-w h-full">
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							Help & FAQs
-						</a>
-
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							My Account
-						</a>
-
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							EN
-						</a>
-
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							USD
-						</a>
-					</div>
-				</li>
-			</ul>
+			{% include 'mainapp/includes/inc_settings_menu_mobile.html' %}
 
 			<ul class="main-menu-m">
-				<li>
-					<a href="{% url 'main:index' %}">Home</a>
-					<ul class="sub-menu-m">
-						<li><a href="{% url 'main:index' %}">Homepage 1</a></li>
-						<li><a href="{% url 'main:home_02' %}">Homepage 2</a></li>
-						<li><a href="{% url 'main:home_03' %}">Homepage 3</a></li>
-					</ul>
-					<span class="arrow-main-menu-m">
-						<i class="fa fa-angle-right" aria-hidden="true"></i>
-					</span>
-				</li>
-
-				<li>
-					<a href="{% url 'main:index' %}">Shop</a>
-				</li>
-
-				<li>
-					<a href="{% url 'main:shoping_cart' %}" class="label1 rs1" data-label1="hot">Features</a>
-				</li>
-
-				<li>
-					<a href="{% url 'main:blog' %}">Blog</a>
-				</li>
-
-				<li>
-					<a href="{% url 'main:about' %}">About</a>
-				</li>
-
-				<li>
-					<a href="{% url 'main:contact' %}">Contact</a>
-				</li>
+				{% include 'mainapp/includes/inc_menu_mobile.html' %}
 			</ul>
 		</div>
 

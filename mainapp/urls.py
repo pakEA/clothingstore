@@ -10,8 +10,6 @@ urlpatterns = [
     path('about/', mainapp.about, name='about'),
     path('blog/', mainapp.blog, name='blog'),
     path('blog_detail/', mainapp.blog_detail, name='blog_detail'),
-    path('home_02/', mainapp.home_02, name='home_02'),
-    path('home_03/', mainapp.home_03, name='home_03'),
     path('product_detail/', mainapp.product_detail, name='product_detail'),
     path('shoping_cart/', mainapp.shoping_cart, name='shoping_cart'),
 ]

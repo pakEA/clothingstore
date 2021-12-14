@@ -1,0 +1,21 @@
+{% extends 'authapp/base.html' %}
+
+{% block container %}
+
+<h3 class="switcher switcher-login">
+    <a href="{% url 'main:index' %}"
+        class="btn btn-round form-control">
+        Home
+    </a>
+</h3>
+<form class="form form-signup" action="{% url 'auth:register' %}" method="post" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Please, enter your username, password and password confirmation for sign up.</legend>
+        {% csrf_token %}
+        <div class="input-block">
+            {{ register_form.as_p }}
+        </div>
+    </fieldset>
+    <button type="submit" class="btn-signup">Continue</button>
+</form>
+{% endblock %}

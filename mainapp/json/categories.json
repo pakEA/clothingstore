@@ -1,0 +1,31 @@
+[
+  {
+    "name": "women",
+    "data": ".women",
+    "description": ""
+  },
+
+  {
+    "name": "men",
+    "data": ".men",
+    "description": ""
+  },
+
+  {
+    "name": "watches",
+    "data": ".watches",
+    "description": ""
+  },
+
+  {
+    "name": "shoes",
+    "data": ".shoes",
+    "description": ""
+  },
+
+  {
+    "name": "bags",
+    "data": ".bags",
+    "description": ""
+  }
+]
