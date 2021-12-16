@@ -8,21 +8,25 @@ from authapp.forms import ShopUserLoginForm, ShopUserRegisterForm, ShopUserEditF
 
 
 def login(request):
+    redirect_to = request.GET.get('next', '')
+
     if request.method == 'POST':
         form = ShopUserLoginForm(data=request.POST)
         if form.is_valid():
             username = request.POST.get('username')
             password = request.POST.get('password')
+            redirect_to = request.POST.get('redirect-to')
             user = auth.authenticate(username=username, password=password)
             if user and user.is_active:
                 auth.login(request, user)
-                return HttpResponseRedirect(reverse('main:index'))
+                return HttpResponseRedirect(redirect_to or reverse('main:index'))
     else:
         form = ShopUserLoginForm()
 
     context = {
         'page_title': 'login',
         'form': form,
+        'redirect_to': redirect_to,
     }
     return render(request, 'authapp/login.html', context)
 

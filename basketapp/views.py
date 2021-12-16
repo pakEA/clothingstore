@@ -4,8 +4,10 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.template.loader import render_to_string
+from django.urls import reverse
 
 from basketapp.models import Basket
+from clothingstore.settings import LOGIN_URL
 
 
 @login_required
@@ -20,6 +22,12 @@ def index(request):
 
 @login_required
 def add(request, product_pk):
+    if LOGIN_URL in request.META.get('HTTP_REFERER'):
+        return HttpResponseRedirect(
+            reverse('mainapp:product_detail',
+                    kwargs={'pk': product_pk})
+        )
+
     basket_item, _ = Basket.objects.get_or_create(
         user=request.user,
         product_id=product_pk
