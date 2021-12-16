@@ -1,8 +1,11 @@
 import os.path
+import random
+
 from django.shortcuts import render, get_object_or_404
 from mainapp.models import ProductCategory, Product
+
 # Create your views here.
-module_dir = os.path.dirname(__file__,)
+module_dir = os.path.dirname(__file__, )
 
 
 def get_menu():
@@ -30,16 +33,16 @@ def product(request, pk=None):
 def category(request, pk):
     get_menu()
     if pk == 0:
-        category = {'pk': 0, 'name': 'all products'}
+        _category = {'pk': 0, 'name': 'all products'}
         products = Product.objects.all()
     else:
-        category = get_object_or_404(ProductCategory, pk=pk)
-        products = category.product_set.all()
+        _category = get_object_or_404(ProductCategory, pk=pk)
+        products = _category.product_set.all()
 
     context = {
         'page_title': 'products of the category',
         'categories': get_menu(),
-        'category': category,
+        'category': _category,
         'products': products,
     }
     return render(request, 'mainapp/product.html', context)
@@ -74,17 +77,28 @@ def blog_detail(request):
 
 
 def product_detail(request, pk):
-    products = Product.objects.filter(pk=pk)
+    product = get_object_or_404(Product, pk=pk)
 
     context = {
         'page_title': 'product detail',
-        'products': products,
+        'product': product,
+        'categories': get_menu(),
+        'same_product': same_product(product),
     }
     return render(request, 'mainapp/product-detail.html', context)
 
 
-def shoping_cart(request):
+def hot_product(request):
+    _hot_product = random.choice(Product.objects.all())
+
     context = {
-        'page_title': 'shoping cart',
+        'page_title': 'hot product',
+        'hot_product': _hot_product,
+        'same_product': same_product(_hot_product),
     }
-    return render(request, 'mainapp/shoping-cart.html', context)
+    return render(request, 'mainapp/hot-product.html', context)
+
+
+def same_product(_hot_product):
+    return Product.objects.filter(category=_hot_product.category). \
+                          exclude(pk=_hot_product.pk)[:4]

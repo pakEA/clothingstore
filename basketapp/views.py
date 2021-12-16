@@ -1,13 +1,21 @@
 import time
 
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
+from django.shortcuts import render, get_object_or_404
+from django.template.loader import render_to_string
+
 from basketapp.models import Basket
 
 
 @login_required
 def index(request):
-    pass
+    basket = request.user.basket.all()
+    context = {
+        'page_title': 'your cart',
+        'basket': basket,
+    }
+    return render(request, 'basketapp/shoping-cart.html', context)
 
 
 @login_required
@@ -24,5 +32,27 @@ def add(request, product_pk):
 
 
 @login_required
-def remove(request, pk):
-    pass
+def remove(request, basket_item_pk):
+    item = get_object_or_404(Basket, pk=basket_item_pk)
+    item.delete()
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+
+def update(request, basket_item_pk, quantity):
+    if request.is_ajax():
+        item = Basket.objects.filter(pk=basket_item_pk).first()
+        if not item:
+            return JsonResponse({'status': False})
+        if quantity == 0:
+            item.delete()
+        else:
+            item.quantity = quantity
+            item.save()
+
+        basket_summary_html = render_to_string(
+                'basketapp/includes/inc_basket_summary.html',
+                request=request)
+
+        return JsonResponse({'status': True,
+                             'basket_summary': basket_summary_html,
+                             'quantity': quantity})
