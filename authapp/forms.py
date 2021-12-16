@@ -10,10 +10,18 @@ class ShopUserLoginForm(AuthenticationForm):
             field.widget.attrs['class'] = 'form-control'
 
 
-class ShopUserRegisterForm(UserCreationForm):
+class AgeValidatorMixin:
+    def clean_age(self):
+        age = self.cleaned_data.get('age')
+        if age and age < 18:
+            raise forms.ValidationError("You're too young!")
+        return age
+
+
+class ShopUserRegisterForm(AgeValidatorMixin, UserCreationForm):
     class Meta:
         model = ShopUser
-        fields = ('username', 'first_name', 'password1', 'password2', 'email')
+        fields = ('username', 'password1', 'password2', 'first_name', 'email', 'age')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -21,14 +29,8 @@ class ShopUserRegisterForm(UserCreationForm):
             field.widget.attrs['class'] = f'form-control {field_name}'
             field.help_text = ''
 
-    def clean_age(self):
-        data = self.cleaned_data['age']
-        if data < 18:
-            raise forms.ValidationError("You're too young!")
-        return data
 
-
-class ShopUserEditForm(UserChangeForm):
+class ShopUserEditForm(AgeValidatorMixin, UserChangeForm):
     class Meta:
         model = ShopUser
         fields = ('username', 'password', 'email', 'first_name', 'last_name', 'age', 'avatar')
@@ -40,9 +42,3 @@ class ShopUserEditForm(UserChangeForm):
             field.help_text = ''
             if field_name == 'password':
                 field.widget = forms.HiddenInput()
-
-    def clean_age(self):
-        data = self.cleaned_data['age']
-        if data < 18:
-            raise forms.ValidationError("You're too young!")
-        return data

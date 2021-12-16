@@ -2,7 +2,7 @@
 {% load static %}
 <html lang="en">
 <head>
-	<title>{{ page_title|title }}</title>
+	<title>{{ page_title|capfirst }}</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     {% block css %}
@@ -28,6 +28,7 @@
 
 	<!-- Cart -->
 	<div class="wrap-header-cart js-panel-cart">
+		{% if user.is_authenticated %}
 		<div class="s-full js-hide-cart"></div>
 
 		<div class="header-cart flex-col-l p-l-65 p-r-25">
@@ -94,7 +95,7 @@
 
 				<div class="w-full">
 					<div class="header-cart-total w-full p-tb-40">
-						Total: $75.00
+						Total: ${{ user.basket_price }}
 					</div>
 
 					<div class="header-cart-buttons flex-w w-full">
@@ -109,6 +110,7 @@
 				</div>
 			</div>
 		</div>
+		{% endif %}
 	</div>
 
 	<!-- Footer -->

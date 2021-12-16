@@ -31,11 +31,9 @@ class Product(models.Model):
     class Meta:
         ordering = ['category_id']
 
-#
-# class ProductGallery(models.Model):
-#     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='images')
-#     image = models.ImageField('image', upload_to='products_images')
-#
-#     class Meta:
-#         verbose_name_plural = 'product gallery'
-#         ordering = ['product_id']
+
+class ProductDetail(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.product.name
