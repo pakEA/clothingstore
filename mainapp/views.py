@@ -1,6 +1,7 @@
 import os.path
 import random
 
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.shortcuts import render, get_object_or_404
 from mainapp.models import ProductCategory, Product
 
@@ -31,6 +32,7 @@ def product(request, pk=None):
 
 
 def category(request, pk):
+    page_num = request.GET.get('page', 1)
     get_menu()
     if pk == 0:
         _category = {'pk': 0, 'name': 'all products'}
@@ -38,6 +40,14 @@ def category(request, pk):
     else:
         _category = get_object_or_404(ProductCategory, pk=pk)
         products = _category.product_set.all()
+
+    products_paginator = Paginator(products, 4)
+    try:
+        products = products_paginator.page(page_num)
+    except PageNotAnInteger:
+        products = products_paginator.page(1)
+    except EmptyPage:
+        products = products_paginator.page(products_paginator.num_pages)
 
     context = {
         'page_title': 'products of the category',
