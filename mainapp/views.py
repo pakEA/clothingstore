@@ -104,6 +104,7 @@ def hot_product(request):
     context = {
         'page_title': 'hot product',
         'hot_product': _hot_product,
+        'categories': get_menu(),
         'same_product': same_product(_hot_product),
     }
     return render(request, 'mainapp/hot-product.html', context)
