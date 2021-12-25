@@ -14,12 +14,6 @@
             </a>
         </li>
 
-        <li class="{% if request.resolver_match.url_name == 'product' or request.resolver_match.url_name == 'category'%} active-menu {% endif %}">
-            <a href="{% url 'main:product' %}">
-                Shop
-            </a>
-        </li>
-
         <li class="label1 {% if request.resolver_match.url_name == 'hot_product' %} active-menu {% endif %}" data-label1="hot">
             <a href="{% url 'main:hot_product' %}">
                 Exclusive
