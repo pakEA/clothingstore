@@ -3,28 +3,12 @@ from django.contrib.auth.decorators import user_passes_test
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse, reverse_lazy
-from django.utils.decorators import method_decorator
 from django.views.generic import CreateView, UpdateView, ListView, DeleteView, DetailView
 
 from adminapp.forms import AdminShopUserUpdateForm, AdminProductCategoryCreateForm, AdminProductUpdateForm
 from authapp.models import ShopUser
+from mainapp.mixin import SuperUserOnlyMixin, PageTitleMixin
 from mainapp.models import ProductCategory, Product
-
-
-class SuperUserOnlyMixin:
-    @method_decorator(user_passes_test(lambda user: user.is_superuser))
-    def dispatch(self, request, *args, **kwargs):
-        return super().dispatch(request, *args, **kwargs)
-
-
-class PageTitleMixin:
-    page_title_key = 'page_title'
-    page_title = None
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context[self.page_title_key] = self.page_title
-        return context
 
 
 class ShopUserListView(SuperUserOnlyMixin, PageTitleMixin, ListView):
