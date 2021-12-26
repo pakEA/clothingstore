@@ -11,14 +11,10 @@ window.onload = function() {
             url: "/basket/update/" + basketItemPk + "/" + quantity + "/",
 
             success: function (data) {
-//            console.log(data);
                 if (data.status) {
                     $('.basket_summary').html(data.basket_summary);
                 }
             },
         });
-       // send to backend
-       // get from backend
-       // do smth in DOM
     });
 }

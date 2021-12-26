@@ -75,7 +75,7 @@
 													</div>
 												</a>
 											</td>
-											<td class="column-2">{{ item.product.name }}</td>
+											<td class="column-2">{{ item.product.name|capfirst }}</td>
 											<td class="column-3">$ {{ item.product.price }}</td>
 											<td class="column-4">
 												<div class="wrap-num-product flex-w m-l-auto m-r-0">
@@ -91,7 +91,7 @@
 													</div>
 												</div>
 											</td>
-											<td class="column-5">$ {{ item.product_cost }}</td>
+											<td class="column-5">$ {{ item.total_cost }}</td>
 										</tr>
 									{% endfor %}
 								</table>
