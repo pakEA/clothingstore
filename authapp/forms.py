@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm
 from authapp.models import ShopUser
+from mainapp.mixin import AgeValidatorMixin
 
 
 class ShopUserLoginForm(AuthenticationForm):
@@ -8,14 +9,6 @@ class ShopUserLoginForm(AuthenticationForm):
         super().__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control'
-
-
-class AgeValidatorMixin:
-    def clean_age(self):
-        age = self.cleaned_data.get('age')
-        if age and age < 18:
-            raise forms.ValidationError("You're too young!")
-        return age
 
 
 class ShopUserRegisterForm(AgeValidatorMixin, UserCreationForm):

@@ -9,7 +9,7 @@
 </h3>
 <form class="form form-login" action="{% url 'auth:login' %}" method="post">
     <fieldset>
-        <legend>Please, enter your email and password for login.</legend>
+        <legend>Please, enter your username and password for login.</legend>
         {% csrf_token %}
         <div class="input-block">
             {{ form.as_p }}
